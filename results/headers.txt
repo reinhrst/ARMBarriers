@@ -1,0 +1,21 @@
+seqlock_acq_rel_0.s -- aquire release, -O0, no patch
+seqlock_acq_rel.s -- acquire release, -O3, no patch
+seqlock_atom_0_opt.s -- implied memory model, -O0, fully patched
+seqlock_atom_0.s -- implied memory model, -O0, no patch
+seqlock_atom_opt.s -- implied memory model, -O3, fuly patched
+seqlock_atom.s -- implied memory model, -O3, no patch
+seqlock_seq_cst_0_opt.s -- seq cst, -O0, fully patched
+seqlock_seq_cst_0.s -- seq cst, -O0, no patch
+seqlock_seq_cst_o1.s -- seq cst, -O3, remove adjacent barriers
+seqlock_seq_cst_o2.s -- seq cst, -O3, remove adjacent and non-adjacent barriers
+seqlock_seq_cst_opt.s -- seq cst, -O3, remove adj and n-a barriers and move out of BB (fully patched)
+seqlock_seq_cst.s -- seq cst, -O3, no patch
+sleep_0.s - seq cst, -O3, fully patched, no sleep in reader
+sleep_10.s - seq cst, -O3, fully patched, 10ms sleep in reader
+sleep_1.s - seq cst, -O3, fully patched, 1ms sleep in reader
+sleep_20.s - seq cst, -O3, fully patched, 20ms sleep in reader
+sleep_2.s - seq cst, -O3, fully patched, 2ms sleep in reader
+sleep_50.s - seq cst, -O3, fully patched, 50ms sleep in reader
+sleep_5.s - seq cst, -O3, fully patched, 5ms sleep in reader
+
+(default implementations all have 100ms sleep)
